@@ -1,0 +1,14 @@
+
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    .buttonContainer {
+        display: flex;
+     button{
+        width: 100%;
+        height: 2rem;
+     }
+    }
+}
