@@ -5,9 +5,15 @@
     gap: 1rem;
     margin: 2rem;
     padding: 2rem;
-    background-color: rgb(236, 216, 216);
-    height: 10%;
+    background-color: rgb(133, 157, 167);
+    color: white;
+    min-height: 100%;
     width: 25%;
+    box-shadow: 2px 3px 2px 2px rgb(98, 81, 81);
+
+    h1{
+        border-bottom: 2px solid black;
+    }
 
 textarea{
     resize: none;
