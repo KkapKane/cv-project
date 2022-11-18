@@ -3,7 +3,7 @@ import Experience from "./experience";
 import Education from "./education";
 import '../style/personal.scss'
 
-function PersonalInfo({getName , getLName, getTitle, getAddress, getPhone}){
+function PersonalInfo({getName , getLName, getTitle, getAddress, getPhone, getEmail, getDescription}){
     
 
     return(
@@ -16,9 +16,9 @@ function PersonalInfo({getName , getLName, getTitle, getAddress, getPhone}){
             <input type="text" placeholder="Title" onChange={getTitle}/>
             <input type="text" placeholder="Address" onChange={getAddress}/>
             <input type="text" placeholder="Phone Number"onChange={getPhone}/>
-            <input type="text" placeholder="email"/>
+            <input type="text" placeholder="email" onChange={getEmail}/>
             
-            <textarea placeholder="description" className="description"/>
+            <textarea placeholder="description" className="description" onChange={getDescription}/>
          
         <Experience/>
         <Education />
