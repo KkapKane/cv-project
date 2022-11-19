@@ -1,7 +1,7 @@
 
 .finalDisplay {
     display: flex;
-    
+    overflow-wrap: break-word;
 
     min-height: 100%;
     width: 100%;
@@ -82,6 +82,25 @@
             background-color: rgb(143, 140, 140);
             height: 100%;
             width: 80%;
+        }
+        .aboutMe{
+            
+            grid-row: 2;
+            font-size: 2rem;
+            width: 80%;
+            margin: 1rem;
+            justify-self: center;
+            background-color: black;
+            height: 20%;
+            align-self: center;
+            
+            .aboutMeInfo {
+                margin-top: 3rem;
+                        font-size: 1rem;
+                        overflow-wrap: break-word;
+                        inline-size: 320px;
+                        
+                    }
         }
         
         .contactMe {
