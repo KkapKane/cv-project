@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+
 import '../style/finalDisplay.scss'
 import ContactResult from "./contactResult";
 import PersonalResult from "./personalResult";
@@ -6,7 +6,7 @@ import AboutMe from "./aboutMe";
 import ExperienceResult from "./experienceResult";
 
 
-function FinalDisplay({name, lname, title, address, phone, email, description, position,visible}){
+function FinalDisplay({genData,position,visible,val, experiences}){
 
    
     return (
@@ -14,18 +14,19 @@ function FinalDisplay({name, lname, title, address, phone, email, description, p
         <div className="left">
             <div className="picture">Picture</div>
             <div className="aboutMe">About Me
-          <AboutMe description={description}/> 
+          <AboutMe genData={genData}/> 
             </div>
             
             <div className="contactMe">Contact Me</div>
-            <ContactResult address={address} phone={phone} email={email}/>
+            <ContactResult genData={genData}/>
 
           </div>
            <div className="right">
-              <PersonalResult data={name} ldata={lname} title={title} />
+              <PersonalResult genData={genData}  />
 
               <div className="workExperience">Work Experience</div>
-            {visible ? <ExperienceResult position={position} /> : null}
+              
+            {visible ? <ExperienceResult position={position} val={val} experiences={experiences}/> : null}
            </div>
      
             

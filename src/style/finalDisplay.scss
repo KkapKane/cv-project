@@ -2,7 +2,7 @@
 .finalDisplay {
     display: flex;
     overflow-wrap: break-word;
-
+    
     min-height: 100%;
     width: 100%;
     margin: 2rem;
@@ -61,6 +61,50 @@
         justify-self: center;
         grid-row: 2;
         grid-column: 1/4;
+    }
+    .experienceCont {
+        
+        grid-row: 2;
+        grid-column: 1/4;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        align-self: end;
+        justify-self: center;
+        justify-content: space-between;
+        flex-direction: column;
+        background-color: rgb(180, 146, 146);
+        height: 75%;
+        width: 80%;
+
+        .position {
+            font-size: 1.3rem;
+        }
+
+        .company {
+            font-size: 2rem;
+            grid-column: 1/7;
+            grid-row: 1;
+            border-bottom: 2px solid black;
+        }
+
+        .city {
+            font-size: 1.3rem;
+        }
+        .from {
+            grid-column: 3;
+            grid-row: 4;
+            font-size: 1rem;
+            justify-self: end;
+            align-self: center;
+        }
+        .to {
+            font-size: 1rem;
+            grid-row: 4;
+            grid-column: 4;
+            align-self: center;
+        }
+
     }
     .left {
         display: grid;
@@ -124,5 +168,6 @@
     }
     }
     
+   
     
 }

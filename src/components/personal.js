@@ -1,25 +1,25 @@
-import React, {useState} from "react";
+
 import Experience from "./experience";
 import Education from "./education";
 import '../style/personal.scss'
 
-function PersonalInfo({getName , getLName, getTitle, getAddress, getPhone, getEmail, getDescription, getPosition, ChangeVis}){
+function PersonalInfo({handlePersonal, genData, updateExperience,  handleChange, getExperiences, experiences, Pid, setExp}){
     
   return(
 
         <div className="personalContainer">
             <h1>Personal Info</h1>
 
-            <input type="text" placeholder="First name" onChange={getName}/>
-            <input type="text" placeholder="Last name"onChange={getLName}/>
-            <input type="text" placeholder="Title" onChange={getTitle}/>
-            <input type="text" placeholder="Address" onChange={getAddress}/>
-            <input type="text" placeholder="Phone Number"onChange={getPhone}/>
-            <input type="text" placeholder="email" onChange={getEmail}/>
+            <input type="text"  id="name" value={genData.name} onChange={handlePersonal}/>
+            <input type="text" placeholder="Last name" id ="last" value={genData.last} onChange={handlePersonal}/>
+            <input type="text" placeholder="Title" id="title" value={genData.title} onChange={handlePersonal}/>
+            <input type="text" placeholder="Address" id="address" value={genData.address} onChange={handlePersonal}/>
+            <input type="text" placeholder="Phone Number" id="phone" value={genData.phone} onChange={handlePersonal}/>
+            <input type="text" placeholder="email" id="email" value={genData.email} onChange={handlePersonal}/>
        
-            <textarea placeholder="description" className="description" onChange={getDescription}/>
-         <button onClick={ChangeVis}>TEST</button>
-        <Experience getPosition={getPosition} ChangeVis={ChangeVis}/>
+            <textarea placeholder="description" className="description" id="description" value={genData.description} onChange={handlePersonal}/>
+        
+        <Experience Pid={Pid}getExperiences={getExperiences} experiences={experiences}   handleChange={handleChange} updateExperience={updateExperience} setExp={setExp}/>
         <Education />
         </div>
         

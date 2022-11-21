@@ -2,14 +2,14 @@ import React from "react";
 
 
 
-function ContactResult({address, phone, email}){
+function ContactResult({genData}){
 
 
     return(
         <div className="contactContainer">
-                <div className="address">{address}</div>
-                <div className="phoneNumber">{phone}</div>
-                <div className="email">{email}</div>
+                <div className="address">{genData.address}</div>
+                <div className="phoneNumber">{genData.phone}</div>
+                <div className="email">{genData.email}</div>
                
             </div>
     )

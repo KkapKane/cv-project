@@ -1,9 +1,9 @@
 import React from "react";
 
 
-function AboutMe({description}){
+function AboutMe({genData}){
     return (
-        <div className="aboutMeInfo">{description}</div>
+        <div className="aboutMeInfo">{genData.description}</div>
     )
 }
 
