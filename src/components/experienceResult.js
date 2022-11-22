@@ -1,21 +1,23 @@
+
 import React from "react";
 
 
-function ExperienceResult({ experiences}){
+function ExperienceResult({experience, setShow}){
+
+    
+
     return (
         
         <div className="experienceCont">
-            {experiences.map(experience => {
-  return (
-    <li key={experience.id}>{experience.company}</li>
-  )
-})}
-        <div className="position">{experiences.position}</div>
-        <div className="company">{experiences.company}</div>
-        <div className="city">{experiences.city}</div>
-        <div className="from">From: {experiences.from}</div>
-        <div className="to">To: {experiences.to}</div>
-        
+            <button  onClick={(e)=> {
+                
+                setShow(experience.id);
+            }}  >remove</button>
+        <div className="company">{experience.position} at {experience.company}</div>
+        <div className="city">Located in {experience.city}</div>
+        <div className="from">From: {experience.from}</div>
+        <div className="to">To: {experience.to}</div>
+       
         </div>
     
         )

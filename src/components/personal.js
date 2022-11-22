@@ -1,9 +1,8 @@
-
 import Experience from "./experience";
 import Education from "./education";
 import '../style/personal.scss'
 
-function PersonalInfo({handlePersonal, genData, updateExperience,  handleChange, getExperiences, experiences, Pid, setExp}){
+function PersonalInfo({handlePersonal, genData, handleChange, setExp,onSubmit,handleSubmit,register,onSubmitEdu, handleSubmit2, register2}){
     
   return(
 
@@ -19,8 +18,8 @@ function PersonalInfo({handlePersonal, genData, updateExperience,  handleChange,
        
             <textarea placeholder="description" className="description" id="description" value={genData.description} onChange={handlePersonal}/>
         
-        <Experience Pid={Pid}getExperiences={getExperiences} experiences={experiences}   handleChange={handleChange} updateExperience={updateExperience} setExp={setExp}/>
-        <Education />
+        <Experience  handleChange={handleChange}  setExp={setExp} register={register} handleSubmit={handleSubmit} onSubmit={onSubmit}/>
+        <Education handleSubmit2={handleSubmit2} register2={register2} onSubmitEdu={onSubmitEdu} />
         </div>
         
     )
