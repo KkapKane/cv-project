@@ -1,4 +1,10 @@
 
+:root {
+    --rmBtn: 40%;
+    --rmBtnDis: none;
+    --eduRmBtn: none;
+}
+
 .finalDisplay {
     display: flex;
     overflow-wrap: break-word;
@@ -9,12 +15,13 @@
     background-color: white;
     border: 2px solid black;
     text-align: center;
+    justify-content: center;
 
     .right{
-        display: grid;
-        
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4,1fr);
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        align-items: center;
         overflow: hidden;
         width: 100%;
 
@@ -27,7 +34,22 @@
             grid-column: 1/4;
             font-size: 1.2rem;
             grid-row: 1;
-            width: 80%;
+            width: 100%;
+
+            &:hover {
+                --eduRmBtn: flex;
+            }
+            
+            button {
+                display: var(--eduRmBtn);
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                grid-column: 4;
+                grid-row: 2;
+                height: 100%;
+                width: 50%;
+            }
 
             .university {
                 grid-column: 2/4;
@@ -39,7 +61,8 @@
             }
 
             .degree {
-                grid-column: 1;
+                justify-self: start;
+                grid-column: 1 / 4;
                 grid-row: 3;
             }
 
@@ -60,7 +83,7 @@
             justify-self: center;
             background-color: rgb(58, 39, 39);
             width: 80%;
-            height: 10%;
+         
             grid-column: 1/4;
             grid-row: 3;
         }
@@ -80,7 +103,7 @@
                 display: flex;
                 position: relative;
                 border-bottom: 1px solid black;
-                border-top: 1px solid black;
+
                 justify-content: center;
                 justify-self: center;
                 align-self: center;
@@ -132,10 +155,10 @@
         color: white;
         font-size: 2rem;
         background-color: grey;
-        height: 10%;
+        
         
         width: 80%;
-        align-self: end;
+        align-self: center;
         justify-self: center;
         grid-row: 1;
         grid-column: 1/4;
@@ -164,13 +187,35 @@
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: repeat(4,1fr);
      
-        border-radius: 20px;
+        
         background-color: rgb(255, 255, 255);
-      
+        transition: 1000ms;
         width: 100%;
+        border-bottom: 2px solid black;
+
+        &:hover {
+            --rmBtn: 100%;
+            --rmBtnDis: flex;
+        }
         
         button {
+            display: var(--rmBtnDis);
+            grid-column: 4;
+            
             color: red;
+            width: var(--rmBtn);
+            height: var(--rmBtn);
+            transition: 1000ms;
+
+            &:hover {
+                color: black;
+                height: 100%;
+                width: 100%;
+            }
+        
+         
+
+
         }
 
         .position {
@@ -181,7 +226,7 @@
             font-size: 1rem;
             grid-column: 1/7;
             grid-row: 1;
-            border-bottom: 2px solid black;
+         
         }
 
         .city {
@@ -208,12 +253,15 @@
 
     }
     .left {
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
         color: white;
-        min-height: 100vh;
+        min-height: 100%;
         height: fit-content;
         width: 40%;
-        background-color: rgb(55, 86, 111);
+        background-color: rgba(57, 64, 81, 0.993);
         
         .picture {
             display: flex;
@@ -227,19 +275,29 @@
             background-color: rgb(143, 140, 140);
             height: 300px;
             width: 80%;
+
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                border: 1px solid black;
+            }
         }
         .aboutMe{
-            
+            text-align: center;
             grid-row: 2;
             font-size: 2rem;
             width: 80%;
+            padding: 2rem;
             margin: 1rem;
             justify-self: center;
-            
-            background-color: black;
+            border-radius: 8px;
+            background-color: rgba($color: #000000, $alpha: .1);
+            box-shadow: 2px 2px 2px 2px rgb(60, 51, 51);
             
             
             .aboutMeInfo {
+                
                 margin-top: 3rem;
                         font-size: 1rem;
                         overflow-wrap: break-word;
@@ -252,16 +310,17 @@
             grid-row: 3;
             width: 80%;
             justify-self: center;
-            align-self: end;
+            align-self: center;
             font-size: 2rem;
-            background-color: rgb(117, 75, 75);
+            box-shadow: 2px 2px 2px 2px rgb(67, 55, 55);
+            background-color: rgb(84, 58, 58);
             height: 2rem;
         }
         .contactContainer{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-self: start;
+        align-self: center;
         gap: 1rem;
         font-size: 1.2rem;
         grid-column: 1;

@@ -1,8 +1,10 @@
 
-
+* {
+    word-break: break-all;
+}
 
 body, html {
-    
+    font-family: monospace;
     margin: 0;
     padding: 0;
     height: 100vh;
