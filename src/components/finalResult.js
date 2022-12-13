@@ -31,7 +31,7 @@ function FinalDisplay({ genData, experiences, setExp, setShow, education, file, 
 
         <div className="expDiv">
 
-          {experiences.map(experience => {
+          {experiences ? experiences.map(experience => {
             if (experience.show === true) {
               return (
                 <div key={experience.id} className='experienceContainer1'>
@@ -39,8 +39,8 @@ function FinalDisplay({ genData, experiences, setExp, setShow, education, file, 
                 </div>
               )
             }
-            return experience
-          })}
+            
+          }) : null}
         </div>
 
         <div className="eduDiv">Education</div>
@@ -54,7 +54,7 @@ function FinalDisplay({ genData, experiences, setExp, setShow, education, file, 
                 </div>
               )
             }
-            return edu
+            
           })}
 
         </div>
